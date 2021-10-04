@@ -23,3 +23,14 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Services\Notification\Handlers\SMSHandler:
+        arguments:
+            $apiKey: '%env(SMS_HANDLER_API_KEY)%'
+            $sender: '%env(SMS_HANDLER_SENDER)%'
+        tags:
+            - { name: notification_service }
+    App\Services\Notification\Handlers\MailHandler:
+        arguments:
+            $from: '%env(MAIL_HANDLER_FROM)%'
+        tags:
+            - { name: notification_service }

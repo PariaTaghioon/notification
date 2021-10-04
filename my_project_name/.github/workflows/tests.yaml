@@ -13,8 +13,8 @@ env:
     SYMFONY_REQUIRE: ">=4.4"
     # 40x: Since symfony/monolog-bridge 5.2:
     # Passing an actionLevel (int|string) as constructor's 3rd argument of
-    # "Symfony\Bridge\Monolog\Handler\FingersCrossed\HttpCodeActivationStrategy"
-    # is deprecated, "Monolog\Handler\FingersCrossed\ActivationStrategyInterface" expected.
+    # "Symfony\Bridge\Monolog\HandlerStrategyInterface\FingersCrossed\HttpCodeActivationStrategy"
+    # is deprecated, "Monolog\HandlerStrategyInterface\FingersCrossed\ActivationStrategyInterface" expected.
     SYMFONY_DEPRECATIONS_HELPER: 40
 
 jobs:
